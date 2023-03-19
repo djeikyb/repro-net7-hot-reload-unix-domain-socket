@@ -1,3 +1,5 @@
+Repro for https://github.com/dotnet/aspnetcore/issues/47310
+
 I added a workaround with logging. The logs demonstrate that the unix domain socket still exists. But since we're checking anyway, I remove the socket so that kestrel won't be bothered by it.
 
 I'm using 7.0.202, and have a global.json created like:
